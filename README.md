@@ -1,11 +1,11 @@
-About r-chronicler
-==================
+About r-chronicler-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-chronicler-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/b-rodrigues/chronicler
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-chronicler-feedstock/blob/main/LICENSE.txt)
 
 Summary: Decorate functions to make them return enhanced output. The enhanced output consists in an object of type 'chronicle' containing the result of the function applied to its arguments, as well as a log detailing when the function was run, what were its inputs, what were the errors (if the function failed to run) and other useful information. Tools to handle decorated functions are included, such as a forward pipe operator that makes chaining decorated functions possible.
 
