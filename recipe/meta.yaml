@@ -1,7 +1,6 @@
 {% set version = "0.2.2" %}
 
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-chronicler
@@ -14,8 +13,7 @@ source:
   sha256: 045d90b80d4bcd73d9818c77003b11593178da863d8e6ce9fa37e51f844d9e08
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
