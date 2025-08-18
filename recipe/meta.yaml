@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/chronicler_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/chronicler/chronicler_{{ version }}.tar.gz
-  sha256: 045d90b80d4bcd73d9818c77003b11593178da863d8e6ce9fa37e51f844d9e08
+  sha256: 2cdb340a0e6973f5b7227f28e4cdf6557f90ecde588b087682660b991f398bbf
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
