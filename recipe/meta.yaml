@@ -1,5 +1,4 @@
 {% set version = "0.3.0" %}
-
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -18,29 +17,30 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
-
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-clipr
     - r-diffobj
     - r-dplyr
+    - r-ggplot2
     - r-maybe
     - r-rlang
-    - r-stringr
     - r-tibble
-
   run:
     - r-base
-    - r-clipr
     - r-diffobj
     - r-dplyr
+    - r-ggplot2
     - r-maybe
     - r-rlang
-    - r-stringr
     - r-tibble
 
 test:
@@ -63,7 +63,6 @@ extra:
     - thewchan
 
 # The original CRAN metadata for this package was:
-
 # Package: chronicler
 # Title: Add Logging to Functions
 # Version: 0.2.0
@@ -85,7 +84,6 @@ extra:
 # Maintainer: Bruno Rodrigues <bruno@brodrigues.co>
 # Repository: CRAN
 # Date/Publication: 2022-05-17 09:40:04 UTC
-
 # See
 # https://docs.conda.io/projects/conda-build for
 # more information about meta.yaml
