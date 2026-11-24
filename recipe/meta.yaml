@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/chronicler_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/chronicler/chronicler_{{ version }}.tar.gz
-  sha256: 2cdb340a0e6973f5b7227f28e4cdf6557f90ecde588b087682660b991f398bbf
+  sha256: 6f56b7b5e74c3e43bca603393a733bdec35897780c831bdd3b483f01668c1110
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -52,8 +52,8 @@ about:
   home: https://github.com/b-rodrigues/chronicler
   doc_url: https://b-rodrigues.github.io/chronicler/
   license: GPL-3.0-or-later
-  summary: Decorate functions to make them return enhanced output. The enhanced output consists in an object of type 'chronicle' containing the result of the function applied to its arguments, as well as a log detailing when the function was run, what were its inputs, what were the errors (if the function failed to run)
-    and other useful information. Tools to handle decorated functions are included, such as a forward pipe operator that makes chaining decorated functions possible.
+  summary: Decorate functions to make them return enhanced output. The enhanced output consists in an object of type 'chronicle' containing the result of the function applied to its arguments, as well as a log detailing when the function was run, what were its inputs, what were the errors (if the function failed to 
+    run) and other useful information. Tools to handle decorated functions are included, such as a forward pipe operator that makes chaining decorated functions possible.
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
